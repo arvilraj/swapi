@@ -1,0 +1,85 @@
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    color: white; 
+    background-color: #ece7e7; 
+    margin: 0; 
+    padding: 0;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/4k-andromeda-galaxy-68af0gq8brnv6qkk.webp);
+    background-size: cover;
+    opacity: 0.9;
+    z-index: -1;
+}
+.planet-item {
+    overflow: hidden;
+  }
+  
+  .planet-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 21px;
+    list-style:none;
+    padding: 20px;
+}
+
+.grid li {
+    border: 1px solid #f0ebeb;
+    border-radius: 8px;
+    padding: 40px 20px;
+    position: relative;
+    background-color: rgba(14, 1, 1, 0.2); 
+}
+
+.grid li .desc {
+    margin-top: 10px;
+}
+
+.grid li h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold; 
+    color: rgb(218, 207, 207); 
+}
+
+.grid li p {
+    margin: 5px 0;
+    color: rgb(231, 237, 240); 
+}
+
+.grid li ul {
+    padding: 0;
+}
+
+@keyframes changeColor {
+    0% { color: rgb(219, 233, 247); }
+    50% { color: rgb(142, 219, 230); }
+    100% { color: rgb(86, 196, 218); } 
+}
+
+.grid li p,
+.grid li h3,
+.grid li ul li strong {
+    animation: changeColor 10s infinite; 
+}
+.PD,
+.AP {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    color: #942d2d;
+    text-shadow: 0 0 2px #c76666, 0 0 6px #ff0000, 0 0 11px #dd5353;
+}
